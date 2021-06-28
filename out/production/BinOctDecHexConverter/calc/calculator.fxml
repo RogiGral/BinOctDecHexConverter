@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" maxHeight="1.7976931348623157E308" maxWidth="481.0" minHeight="399.0" minWidth="481.0" prefHeight="399.0" prefWidth="481.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.Controller">
+<GridPane alignment="center" hgap="10" maxHeight="423.0" maxWidth="481.0" minHeight="360.0" minWidth="410.0" prefHeight="360.0" prefWidth="527.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
