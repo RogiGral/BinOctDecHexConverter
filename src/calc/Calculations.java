@@ -12,21 +12,21 @@ public class Calculations {
         for (char c : n.toCharArray()) if (!digitsList.contains(c)) return false;
         return true;
     }
-    public static String base2base(String n, int b1, int b2) {
-        int decimalValue = 0, charB2;
-        char charB1;
+    public static String base2base(String inpString, int inpNumSys, int outNumSys) {
+        int decimalValue = 0, charOutSys;
+        char charInpSys;
         String output = "";
-        for (int i = 0; i < n.length(); i++) {
-            charB1 = n.charAt(i);
-            if (charB1 >= 'A' && charB1 <= 'Z') charB2 = 10 + (charB1 - 'A');
-            else charB2 = charB1 - '0';
-            decimalValue = decimalValue * b1 + charB2;
+        for (int i = 0; i < inpString.length(); i++) {
+            charInpSys = inpString.charAt(i);
+            if (charInpSys >= 'A' && charInpSys <= 'Z') charOutSys = 10 + (charInpSys - 'A');
+            else charOutSys = charInpSys - '0';
+            decimalValue = decimalValue * inpNumSys + charOutSys;
         }
         if (0 == decimalValue) return "0";
         while (decimalValue != 0) {
-            if (decimalValue % b2 < 10) output = Integer.toString(decimalValue % b2) + output;
-            else output = (char) ((decimalValue % b2) + 55) + output;
-            decimalValue /= b2;
+            if (decimalValue % outNumSys < 10) output = Integer.toString(decimalValue % outNumSys) + output;
+            else output = (char) ((decimalValue % outNumSys) + 55) + output;
+            decimalValue /= outNumSys;
         }
         return output;
     }
