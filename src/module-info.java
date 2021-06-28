@@ -4,5 +4,5 @@ module BinOctDecHexConverter {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens sample;
+    opens calc;
 }

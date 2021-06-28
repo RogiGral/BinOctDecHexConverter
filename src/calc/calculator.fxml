@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" maxHeight="423.0" maxWidth="481.0" minHeight="360.0" minWidth="410.0" prefHeight="360.0" prefWidth="527.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="399.0" prefWidth="481.0">
+         <left>
+            <VBox prefHeight="134.0" prefWidth="239.0" BorderPane.alignment="CENTER">
+               <children>
+                  <RadioButton fx:id="inpBIN" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="BIN">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="input" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="inpDEC" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="DEC" toggleGroup="$input" />
+                  <RadioButton fx:id="inpOCT" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="OCT" toggleGroup="$input" />
+                  <RadioButton fx:id="inpHEX" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="HEX" toggleGroup="$input" />
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="120" prefWidth="239.0" BorderPane.alignment="CENTER">
+               <children>
+                  <RadioButton fx:id="outBIN" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="BIN">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="output" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="outDEC" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="DEC" toggleGroup="$output" />
+                  <RadioButton fx:id="outOCT" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="OCT" toggleGroup="$output" />
+                  <RadioButton fx:id="outHEX" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" text="HEX" toggleGroup="$output" />
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <VBox prefHeight="53.0" prefWidth="481.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="inputBox" prefHeight="193.0" prefWidth="481.0" />
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox alignment="CENTER" prefHeight="140" prefWidth="481.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="errorBox" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="481.0" textFill="#f20000" />
+                  <Label fx:id="outputBox" prefHeight="68.0" prefWidth="481.0" />
+                  <Button fx:id="calculateButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pressCalculate" prefHeight="30.0" prefWidth="309.0" text="CALCULATE" />
+               </children></VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</GridPane>
